@@ -1,71 +1,87 @@
 [
   {
-    "id": "welcome-to-good-news-rowlett",
-    "title": "Welcome to Good News Rowlett",
-    "excerpt": "A home for the good things happening in Rowlett – the neighbors, businesses and moments that make this town home.",
-    "cover": "/good-news-card.png",
-    "coverAlt": "Good News Rowlett",
-    "createdAt": 1791118800000,
-    "body": "Scroll through some local Facebook groups and you might think nothing good ever happens in Rowlett. Anyone who lives here knows better.\n\nEvery week, a neighbor mows a yard for someone who's laid up. A local shop sponsors a Little League team. A teacher stays late. Someone opens a new restaurant on a dream and a lot of hard work. Those stories rarely trend, but they're the real Rowlett.\n\nGood News Rowlett is where we'll collect them – short, true stories about the people and places that make this a great place to live, written so you can pass them along.\n\nHere's what you'll find:\n\n- New businesses opening, and milestones for the ones that have been here for years\n- Neighbors helping neighbors\n- Students, teachers, coaches and volunteers worth celebrating\n- Community events, park improvements and things to do around Lake Ray Hubbard\n\nWhat you won't find: politics, arguments or rumors. There are plenty of places for those already.\n\nHave some good news? Share it with us. A few sentences and a photo is plenty. We'll check the details and give it the spotlight it deserves.\n\nThanks for reading, and thanks for choosing to see the best in Rowlett."
-  },
-  {
-    "id": "sanitation-driver-reunites-lost-child",
     "title": "A Republic Services driver stops his route to bring a lost child home",
+    "id": "sanitation-driver-reunites-lost-child",
+    "date": "2026-10-04",
+    "publish": true,
+    "author": "",
     "excerpt": "When a little one wandered into the street, Alberto Gutierrez stopped the truck and went door to door until he found Mom.",
+    "cover": "/gn-sanitation-driver-reunites-lost-child.png",
     "coverAlt": "Everyday kindness: stop the truck, bring them home",
-    "createdAt": 1791133200000,
+    "credit": "",
     "body": "It was supposed to be an ordinary trash day in a Rowlett neighborhood.\n\nAlberto Gutierrez, a Republic Services driver with more than 30 years on the job, was working his route with a trainee when they spotted a young child alone and upset, running into the street. The child had slipped out a back door at home.\n\nGutierrez climbed down from the truck, calmed the child and started knocking on doors. At the third house, he found the child's mom.\n\nAfterward, he said he was simply glad he could reunite them – and that the child was safe.\n\nNext time the truck comes down your street, give your driver a wave.",
     "sources": [
       {
         "name": "FOX 4 News",
         "url": "https://www.fox4news.com/news/plano-garbage-truck-driver-reunites-lost-child-parents"
       }
-    ],
-    "cover": "/gn-sanitation-driver-reunites-lost-child.png"
+    ]
   },
   {
-    "id": "tamra-williams-big-r-pacesetter-award",
     "title": "Tamra Williams wins the Big “R” Pacesetter Award",
+    "id": "tamra-williams-big-r-pacesetter-award",
+    "date": "2026-10-04",
+    "publish": true,
+    "author": "",
     "excerpt": "The Rowlett Lions Club president was honored at the Chamber's Hometown Heroes banquet for moving Rowlett forward.",
+    "cover": "/gn-tamra-williams-big-r-pacesetter-award.png",
     "coverAlt": "Hometown hero: Big R Pacesetter Award",
-    "createdAt": 1791129600000,
+    "credit": "",
     "body": "At the Rowlett Area Chamber & Visitors Center's Hometown Heroes Awards Banquet on August 27, Tamra Williams received the Big “R” Pacesetter Award. The honor goes to someone whose leadership and initiative move the whole community forward.\n\nAs president of the Rowlett Lions Club, Williams led the club through a year of nearly $46,000 in donations to causes like Texas Lions Camp, the Hope in Hand Food Pantry, St. Vincent de Paul, the Rowlett Needy Children's Fund and local scholarships.\n\nShe has also teamed up with groups across town, including the N.E.D.C. Kiwanis Club, Rowlett CERT, the Rowlett Chamber of Commerce and Rowlett Strong.\n\nTrue to form, Williams shared the credit, saying the award belongs just as much to the members who serve alongside her.\n\nCongratulations, Tamra – and thank you.",
     "sources": [
       {
         "name": "Blue Ribbon News",
         "url": "https://blueribbonnews.com/2026/09/rowlett-lions-club-president-tamra-williams-honored-with-prestigious-big-r-pacesetter-award/"
       }
-    ],
-    "cover": "/gn-tamra-williams-big-r-pacesetter-award.png"
+    ]
   },
   {
-    "id": "rowlett-lions-club-gives-nearly-46000",
     "title": "Rowlett Lions Club gives nearly $46,000 back to the community",
+    "id": "rowlett-lions-club-gives-nearly-46000",
+    "date": "2026-10-04",
+    "publish": true,
+    "author": "",
     "excerpt": "In its latest fiscal year, the club sent $45,920 to kids, families and students across Rowlett.",
+    "cover": "/gn-rowlett-lions-club-gives-nearly-46000.png",
     "coverAlt": "Neighbors helping neighbors: $45,920 given back to Rowlett",
-    "createdAt": 1791126000000,
+    "credit": "",
     "body": "The Rowlett Lions Club has been serving this town since 1966, and this year it had a lot to show for it.\n\nIn the fiscal year that ended June 30, the club donated $45,920 to local charities, scholarships and community programs. Here's where it went:\n\n- Texas Lions Camp for Children with Disabilities\n- Lions Sight & Tissue Foundation\n- Rowlett Needy Children's Fund\n- Society of St. Vincent de Paul in Rowlett\n- Hope in Hand Food Pantry at First Christian Church of Rowlett\n- Scholarships for Rowlett High School students\n\nThat's food on tables, camp for kids who might not otherwise go, and a head start for graduating seniors – all from neighbors who decided to show up.\n\nWant to be part of it? The Rowlett Lions Club meets at 6:30 p.m. on the second Monday of every month at Tokyo Hana in Rowlett.",
     "sources": [
       {
         "name": "Blue Ribbon News",
         "url": "https://blueribbonnews.com/2026/07/rowlett-lions-club-donates-nearly-46000-to-local-charities-scholarships-and-community-programs/"
       }
-    ],
-    "cover": "/gn-rowlett-lions-club-gives-nearly-46000.png"
+    ]
   },
   {
-    "id": "rowlett-family-hosted-world-cup-star",
     "title": "The Rowlett family that hosted a future World Cup player",
+    "id": "rowlett-family-hosted-world-cup-star",
+    "date": "2026-10-04",
+    "publish": true,
+    "author": "",
     "excerpt": "Years before Sweden's Hjalmar Ekdal reached soccer's biggest stage, he was a teenage houseguest in Rowlett.",
+    "cover": "/gn-rowlett-family-hosted-world-cup-star.png",
     "coverAlt": "Rowlett pride: from our house to the World Cup",
-    "createdAt": 1791122400000,
+    "credit": "",
     "body": "In 2014, the Blue family of Rowlett opened their home to a group of Swedish teenagers in town for the Dallas Cup, the international youth soccer tournament.\n\nOne of them was Hjalmar Ekdal. Today he's a defender for Sweden's national team, and this summer he was part of Sweden's squad at the 2026 FIFA World Cup – with a match scheduled right here in North Texas.\n\nRyan Blue remembers the visitors as lively and fun, and fascinated by big trucks, Texas barbecue and the family's pitching machine. His dad, Bryan, says even back then the other players predicted Ekdal would make the national team one day.\n\nThe families lost touch over the years, but the Blues planned to cheer him on from their Rowlett living room.\n\nIt's a good reminder that a little Rowlett hospitality can travel a long way.",
     "sources": [
       {
         "name": "FOX 4 News",
         "url": "https://www.fox4news.com/news/how-rowlett-family-ended-up-hosting-future-world-cup-star"
       }
-    ],
-    "cover": "/gn-rowlett-family-hosted-world-cup-star.png"
+    ]
+  },
+  {
+    "title": "Welcome to Good News Rowlett",
+    "id": "welcome-to-good-news-rowlett",
+    "date": "2026-10-04",
+    "publish": true,
+    "author": "",
+    "excerpt": "A home for the good things happening in Rowlett – the neighbors, businesses and moments that make this town home.",
+    "cover": "/good-news-card.png",
+    "coverAlt": "Good News Rowlett",
+    "credit": "",
+    "body": "Scroll through some local Facebook groups and you might think nothing good ever happens in Rowlett. Anyone who lives here knows better.\n\nEvery week, a neighbor mows a yard for someone who's laid up. A local shop sponsors a Little League team. A teacher stays late. Someone opens a new restaurant on a dream and a lot of hard work. Those stories rarely trend, but they're the real Rowlett.\n\nGood News Rowlett is where we'll collect them – short, true stories about the people and places that make this a great place to live, written so you can pass them along.\n\nHere's what you'll find:\n\n- New businesses opening, and milestones for the ones that have been here for years\n- Neighbors helping neighbors\n- Students, teachers, coaches and volunteers worth celebrating\n- Community events, park improvements and things to do around Lake Ray Hubbard\n\nWhat you won't find: politics, arguments or rumors. There are plenty of places for those already.\n\nHave some good news? Share it with us. A few sentences and a photo is plenty. We'll check the details and give it the spotlight it deserves.\n\nThanks for reading, and thanks for choosing to see the best in Rowlett.",
+    "sources": []
   }
 ]

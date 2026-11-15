@@ -1,0 +1,74 @@
+# Pages CMS (app.pagescms.org) – the editor screen for Good News Rowlett.
+# Editors can only change stories and story photos. Nothing else on the site is editable here.
+
+media:
+  - name: images
+    label: Story photos
+    input: public/images
+    output: /images
+    categories: [image]
+    rename: safe
+
+content:
+  - name: stories
+    label: Stories
+    type: file
+    path: src/data/stories.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Headline
+        type: string
+        required: true
+      - name: publish
+        label: Publish on the site
+        type: boolean
+        default: false
+        description: Leave this off while you're writing. Turn it on when the story is ready to go live.
+      - name: date
+        label: Date
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: excerpt
+        label: One-sentence summary
+        type: text
+        description: Shows under the headline and when the story is shared on Facebook.
+      - name: cover
+        label: Cover image
+        type: image
+        description: Best size is 1200 x 630 pixels.
+        options:
+          media: images
+      - name: coverAlt
+        label: Cover image description
+        type: string
+        description: A few words describing the photo, for people using screen readers.
+      - name: credit
+        label: Photo credit
+        type: string
+      - name: body
+        label: Story
+        type: text
+        description: Leave a blank line between paragraphs. Start a line with "- " to make a bullet list.
+      - name: author
+        label: Written by
+        type: string
+        description: Optional. Leave blank to show no byline.
+      - name: sources
+        label: Sources
+        type: object
+        list: true
+        description: Where the facts came from, such as a news article or Facebook post.
+        fields:
+          - name: name
+            label: Source name
+            type: string
+          - name: url
+            label: Link
+            type: string
+      - name: id
+        label: Web address
+        type: string
+        description: Optional. Leave blank and it's made from the headline. Don't change it after a story is shared.

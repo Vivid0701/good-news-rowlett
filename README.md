@@ -12,14 +12,15 @@ The stand-alone Good News Rowlett site for goodnewsrowlett.com. It runs as its o
 Old Shop Rowlett First links (`/good-news/...`) redirect here automatically.
 
 ## Adding a story
-Stories are in `src/data/stories.json`. Copy one block, then change:
-- `id` – the web address, lowercase with dashes (for example `teacher-of-the-year`)
-- `title`, `excerpt` (one sentence), `body` (blank line between paragraphs; lines starting with "- " become a list)
-- `cover` – an image in `public/` (1200 x 630), and `coverAlt`
-- `createdAt` – the date in milliseconds
-- `sources` – optional, a list of `{ "name": "...", "url": "..." }`
+Stories are edited at **app.pagescms.org** (Pages CMS). Open the good-news-rowlett repository, then **Stories**.
+- **Publish on the site** – off while writing; turn it on to put the story live.
+- **Web address** – leave blank and it's made from the headline.
+- Saving publishes the change within a couple of minutes.
 
-Saving the change on GitHub publishes it within a couple of minutes.
+Stories are stored in `src/data/stories.json`, and uploaded photos go to `public/images/`.
+
+## Editor login
+In Pages CMS, open the repository → **Collaborators** → invite the editor by email. Editors don't need a GitHub account and can only change stories and photos – not the site's design, settings or other collaborators.
 
 ## Setting it up on Netlify (one time)
 1. Netlify → **Add new project → Import an existing project → GitHub → good-news-rowlett**.
