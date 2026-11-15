@@ -17,7 +17,7 @@ Stories are edited at **app.pagescms.org** (Pages CMS). Open the good-news-rowle
 - **Web address** – leave blank and it's made from the headline.
 - Saving publishes the change within a couple of minutes.
 
-Stories are stored in `src/data/stories.json`, and uploaded photos go to `public/images/`.
+Each story is its own file in `src/data/stories/`, and uploaded photos go to `public/images/`.
 
 ## Editor login
 In Pages CMS, open the repository → **Collaborators** → invite the editor by email. Editors don't need a GitHub account and can only change stories and photos – not the site's design, settings or other collaborators.

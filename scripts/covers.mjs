@@ -48,7 +48,7 @@ function headlineCard(label, title) {
   return new Resvg(svg, { font: { fontFiles: FONTS, loadSystemFonts: false, defaultFontFamily: "Inter Display" } }).render().asPng();
 }
 
-const stories = readStories(join(root, "src/data/stories.json"));
+const stories = readStories(join(root, "src/data/stories"));
 const map = {};
 for (const g of stories) {
   const cover = (g.cover || "").trim();
@@ -56,7 +56,7 @@ for (const g of stories) {
   try {
     if (cover && existsSync(src)) {
       const meta = await sharp(src).metadata();
-      // The original branded cards are already 1200 x 630 – keep them as they are.
+      // Branded cards that are already 1200 x 630 PNGs are used as they are.
       if (meta.width === 1200 && meta.height === 630 && meta.format === "png") { map[g.id] = { card: cover, full: cover }; continue; }
       await sharp(src).rotate().resize(1200, 630, { fit: "cover", position: sharp.strategy.attention }).jpeg({ quality: 82, mozjpeg: true }).toFile(join(OUT, `${g.id}.jpg`));
       await sharp(src).rotate().resize({ width: 1600, height: 1600, fit: "inside", withoutEnlargement: true }).jpeg({ quality: 82, mozjpeg: true }).toFile(join(OUT, `${g.id}-full.jpg`));

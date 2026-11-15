@@ -12,10 +12,20 @@ media:
 content:
   - name: stories
     label: Stories
-    type: file
-    path: src/data/stories.json
+    type: collection
+    path: src/data/stories
     format: json
-    list: true
+    filename:
+      template: "{primary}.json"
+      field: false
+    view:
+      fields: [title, date, publish]
+      primary: title
+      sort: [date, title]
+      search: [title, excerpt, body]
+      default:
+        sort: date
+        order: desc
     fields:
       - name: title
         label: Headline
@@ -76,3 +86,7 @@ content:
         label: Web address
         type: string
         description: Optional. Leave blank and it's made from the headline. Don't change it after a story is shared.
+      - name: order
+        label: Order on the same day
+        type: number
+        hidden: true
