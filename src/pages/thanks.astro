@@ -11,8 +11,7 @@ import Base from "../layouts/Base.astro";
 <script is:inline>
   (function () {
     var f = new URLSearchParams(location.search).get("form");
-    var m = { "good-news-tip": "Thanks for sharing. We'll check the details and let you know if your story is published.",
-      "good-news-email": "You're on the list. Watch your inbox for the next round of good news." };
+    var m = { "good-news-tip": "Thanks for sharing. We'll check the details and let you know if your story is published." };
     if (m[f]) document.getElementById("thanks-msg").textContent = m[f];
   })();
 </script>

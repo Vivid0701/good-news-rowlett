@@ -7,7 +7,7 @@ const { title, description, image = "/good-news-card.png", jsonLd = null, nav = 
 const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Good news from Rowlett, Texas`;
 const canonical = new URL(Astro.url.pathname.replace(/\.html$/, "").replace(/\/index$/, "/") || "/", Astro.site).href;
 const ogImage = new URL(image, Astro.site).href;
-const items = [["/", "Stories", "stories"], ["/about", "About", "about"], ["/subscribe", "Get it by email", "subscribe"]];
+const items = [["/", "Stories", "stories"], ["/about", "About", "about"]];
 ---
 <!doctype html>
 <html lang="en">
@@ -38,7 +38,7 @@ const items = [["/", "Stories", "stories"], ["/about", "About", "about"], ["/sub
     <div class="wrap">
       <Logo small />
       <nav class="gn-nav" aria-label="Main">
-        {items.map(([href, label, key]) => <a href={href} class:list={[{ "hide-sm": key === "subscribe" }]} aria-current={nav === key ? "page" : undefined}>{label}</a>)}
+        {items.map(([href, label, key]) => <a href={href} aria-current={nav === key ? "page" : undefined}>{label}</a>)}
         <a href="/share" class="btn red small">Share good news</a>
       </nav>
     </div>
@@ -51,7 +51,7 @@ const items = [["/", "Stories", "stories"], ["/about", "About", "about"], ["/sub
         <p style="margin-top:12px;opacity:.85;font-size:.95rem;max-width:42ch">Real stories from the neighbors, businesses and moments that make Rowlett, Texas home.</p>
       </div>
       <div><span class="eyebrow" style="color:inherit;opacity:.7">Read</span>
-        <ul><li><a href="/">All stories</a></li><li><a href="/about">About Good News Rowlett</a></li><li><a href="/subscribe">Get it by email</a></li></ul></div>
+        <ul><li><a href="/">All stories</a></li><li><a href="/about">About Good News Rowlett</a></li></ul></div>
       <div><span class="eyebrow" style="color:inherit;opacity:.7">Take part</span>
         <ul><li><a href="/share">Share good news</a></li><li><a href="/about#guidelines">What we publish</a></li></ul></div>
       <p class="fine">{DISCLOSURE} © {new Date().getFullYear()} Good News Rowlett · Rowlett, TX</p>

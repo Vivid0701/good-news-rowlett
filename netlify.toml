@@ -13,6 +13,12 @@
   status = 301
   force = true
 
+# Email sign-up is off for now (page kept as src/pages/_subscribe.astro).
+[[redirects]]
+  from = "/subscribe"
+  to = "/"
+  status = 302
+
 # Links shared while Good News lived inside Shop Rowlett First keep working.
 [[redirects]]
   from = "/good-news"
