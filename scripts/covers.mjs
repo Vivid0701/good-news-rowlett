@@ -58,9 +58,20 @@ for (const g of stories) {
       const meta = await sharp(src).metadata();
       // Branded cards that are already 1200 x 630 PNGs are used as they are.
       if (meta.width === 1200 && meta.height === 630 && meta.format === "png") { map[g.id] = { card: cover, full: cover }; continue; }
-      await sharp(src).rotate().resize(1200, 630, { fit: "cover", position: sharp.strategy.attention }).jpeg({ quality: 82, mozjpeg: true }).toFile(join(OUT, `${g.id}.jpg`));
-      await sharp(src).rotate().resize({ width: 1600, height: 1600, fit: "inside", withoutEnlargement: true }).jpeg({ quality: 82, mozjpeg: true }).toFile(join(OUT, `${g.id}-full.jpg`));
-      map[g.id] = { card: `/covers/${g.id}.jpg`, full: `/covers/${g.id}-full.jpg`, photo: true };
+      const turned = await sharp(src).rotate().toBuffer({ resolveWithObject: true });
+      const ratio = turned.info.width / turned.info.height;
+      if (ratio >= 1.5) {
+        // Wide photo: fill the card, keeping the most interesting part in frame.
+        await sharp(turned.data).resize(1200, 630, { fit: "cover", position: sharp.strategy.attention }).jpeg({ quality: 82, mozjpeg: true }).toFile(join(OUT, `${g.id}.jpg`));
+        await sharp(turned.data).resize({ width: 1600, height: 1600, fit: "inside", withoutEnlargement: true }).jpeg({ quality: 82, mozjpeg: true }).toFile(join(OUT, `${g.id}-full.jpg`));
+        map[g.id] = { card: `/covers/${g.id}.jpg`, full: `/covers/${g.id}-full.jpg`, photo: true };
+      } else {
+        // Square, tall or logo-style image: show all of it, centered on a soft blurred copy of itself.
+        const bg = await sharp(turned.data).resize(1200, 630, { fit: "cover" }).blur(40).modulate({ brightness: 0.55 }).toBuffer();
+        const fg = await sharp(turned.data).resize({ width: 1100, height: 570, fit: "inside" }).toBuffer();
+        await sharp(bg).composite([{ input: fg, gravity: "center" }]).jpeg({ quality: 85, mozjpeg: true }).toFile(join(OUT, `${g.id}.jpg`));
+        map[g.id] = { card: `/covers/${g.id}.jpg`, full: `/covers/${g.id}.jpg`, photo: true };
+      }
     } else {
       if (cover) console.warn(`[covers] "${g.title}": photo ${cover} not found – using a headline card`);
       writeFileSync(join(OUT, `${g.id}.png`), headlineCard(g.cardLabel || "Good News", g.title));
