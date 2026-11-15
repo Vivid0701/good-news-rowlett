@@ -1,0 +1,29 @@
+---
+// A page with a Netlify form. Netlify finds the form when it publishes the site,
+// keeps every submission under Forms in the Netlify dashboard and can email you each one.
+import Base from "../layouts/Base.astro";
+const { title, heading, intro, name, upload = false, nav = "", button = "Send" } = Astro.props;
+---
+<Base title={title} description={intro} nav={nav}>
+  <div class="wrap">
+    <section class="band" style="padding-top:36px">
+      <div class="stack" style="gap:18px;max-width:640px">
+        <h1 style="font-size:clamp(2rem,5vw,3rem)">{heading}</h1>
+        <p class="muted">{intro}</p>
+        <form class="f card" name={name} method="POST" action={`/thanks?form=${name}`} data-netlify="true" netlify-honeypot="website_url" enctype={upload ? "multipart/form-data" : undefined}>
+          <input type="hidden" name="form-name" value={name}>
+          <p hidden><label>Leave this empty <input name="website_url"></label></p>
+          <slot />
+          <div><button class="btn red" type="submit">{button}</button></div>
+          <p class="note">We only use your details for Good News Rowlett. We never sell or share them.</p>
+        </form>
+      </div>
+    </section>
+  </div>
+</Base>
+<style>
+  form :global(.two){display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:560px){form :global(.two){grid-template-columns:1fr}}
+  form :global(.check){display:flex;gap:10px;align-items:center;font-weight:600}
+  form :global(.check input){width:auto}
+</style>

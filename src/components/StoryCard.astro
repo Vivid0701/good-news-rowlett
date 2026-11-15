@@ -1,0 +1,10 @@
+---
+import { fmtDate } from "../lib.js";
+const { g } = Astro.props;
+---
+<a class="gn-card" href={`/${g.id}`}>
+  {g.cover && <img src={g.cover} alt={g.coverAlt || ""} width="600" height="315" loading="lazy">}
+  <span class="eyebrow">{fmtDate(g.createdAt)}</span>
+  <h3>{g.title}</h3>
+  <p class="note">{g.excerpt}</p>
+</a>

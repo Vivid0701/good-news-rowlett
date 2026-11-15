@@ -1,0 +1,11 @@
+---
+// Plain-text story body: blank lines split paragraphs; a block of lines starting with "- " becomes a list.
+const { body = "" } = Astro.props;
+const blocks = String(body).split(/\n{2,}/).map((b) => b.trim()).filter(Boolean);
+---
+{blocks.map((b) => {
+  const lines = b.split("\n");
+  return lines.every((l) => /^[-•]\s/.test(l))
+    ? <ul>{lines.map((l) => <li>{l.replace(/^[-•]\s/, "")}</li>)}</ul>
+    : <p>{b}</p>;
+})}

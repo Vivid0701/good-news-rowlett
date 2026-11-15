@@ -1,0 +1,27 @@
+---
+import Base from "../layouts/Base.astro";
+import { DISCLOSURE } from "../lib.js";
+---
+<Base title="About" description="Good News Rowlett collects short, true stories about the people and places that make Rowlett, Texas a great place to live." nav="about">
+  <div class="wrap">
+    <section class="band prose" style="max-width:760px">
+      <h1 style="font-size:clamp(2rem,5vw,3rem)">Rowlett is better than its comment sections</h1>
+      <p class="gn-dek">Scroll through some local Facebook groups and you might think nothing good ever happens here. Anyone who lives here knows better.</p>
+      <p>Every week, a neighbor mows a yard for someone who's laid up. A local shop sponsors a Little League team. A teacher stays late. Someone opens a new restaurant on a dream and a lot of hard work. Those stories rarely trend, but they're the real Rowlett.</p>
+      <p>Good News Rowlett is where we collect them – short, true stories, written so you can pass them along.</p>
+    </section>
+
+    <section class="band" id="guidelines" style="padding-top:0">
+      <div class="guidelines">
+        <div class="card"><h2 style="font-size:1.3rem">What you'll find</h2>
+          <ul><li>New businesses opening, and milestones for the ones that have been here for years</li><li>Neighbors helping neighbors</li><li>Students, teachers, coaches and volunteers worth celebrating</li><li>Community events, park improvements and things to do around Lake Ray Hubbard</li></ul></div>
+        <div class="card"><h2 style="font-size:1.3rem">What you won't</h2>
+          <ul><li>Politics, candidates or city hall debates</li><li>Arguments or rumors</li><li>Paid stories or ads dressed up as news</li></ul></div>
+        <div class="card"><h2 style="font-size:1.3rem">How stories get here</h2>
+          <p>Anyone can send in good news. We check the details, write it up and credit our sources. If something's wrong, tell us and we'll fix it.</p>
+          <a class="btn red" href="/share" style="justify-self:start">Share good news</a></div>
+      </div>
+      <p class="note" style="margin-top:24px">{DISCLOSURE}</p>
+    </section>
+  </div>
+</Base>

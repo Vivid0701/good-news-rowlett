@@ -1,0 +1,22 @@
+---
+// Good News Rowlett sunrise logo. tone "light" = white type (for black backgrounds), "dark" = black type.
+// small = one-line logo for the top bar.
+const { small = false, tone = "light" } = Astro.props;
+const ink = tone === "light" ? "#FFFFFF" : "#0B0B0B";
+---
+<a href="/" class:list={["gn-logo", { small }]} aria-label="Good News Rowlett home" style={`--gn-ink:${ink}`}>
+  <svg class="gn-sun" viewBox="0 0 200 96" aria-hidden="true">
+    <g stroke="#ED1C24" stroke-width="7" stroke-linecap="round">
+      <line x1="156.4" y1="67.5" x2="175.2" y2="60.6" /><line x1="146" y1="49.4" x2="161.3" y2="36.6" />
+      <line x1="130" y1="36" x2="140" y2="18.7" /><line x1="110.4" y1="28.9" x2="113.9" y2="9.2" />
+      <line x1="89.6" y1="28.9" x2="86.1" y2="9.2" /><line x1="70" y1="36" x2="60" y2="18.7" />
+      <line x1="54" y1="49.4" x2="38.7" y2="36.6" /><line x1="43.6" y1="67.5" x2="24.8" y2="60.6" />
+    </g>
+    <path d="M58 88 A42 42 0 0 1 142 88 Z" fill="#ED1C24" />
+    <rect x="0" y="88" width="200" height="7" rx="3.5" fill={ink} />
+  </svg>
+  <span class="gn-type">
+    <span class="gn-good">GOOD NEWS</span>
+    <span class="gn-row"><i></i><b>ROWLETT</b><i></i></span>
+  </span>
+</a>

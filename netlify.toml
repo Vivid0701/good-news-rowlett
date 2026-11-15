@@ -1,0 +1,38 @@
+# Good News Rowlett – Netlify reads this file when it builds the site. Nothing here needs changing in the dashboard.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# www goes to the plain address.
+[[redirects]]
+  from = "https://www.goodnewsrowlett.com/*"
+  to = "https://goodnewsrowlett.com/:splat"
+  status = 301
+  force = true
+
+# Links shared while Good News lived inside Shop Rowlett First keep working.
+[[redirects]]
+  from = "/good-news"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/good-news/share"
+  to = "/share"
+  status = 301
+[[redirects]]
+  from = "/good-news/*"
+  to = "/:splat"
+  status = 301
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
