@@ -3,11 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "covers": "node scripts/covers.mjs",
+    "dev": "node scripts/covers.mjs && astro dev",
+    "build": "node scripts/covers.mjs && astro build",
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^5.0.0"
+    "@resvg/resvg-js": "^2.6.2",
+    "astro": "^5.0.0",
+    "sharp": "^0.33.5"
   }
 }

@@ -36,13 +36,17 @@ content:
         type: text
         description: Shows under the headline and when the story is shared on Facebook.
       - name: cover
-        label: Cover image
+        label: Photo
         type: image
-        description: Best size is 1200 x 630 pixels.
+        description: Optional. Any photo works – straight from your phone is fine, any size or shape. No photo? Leave it empty and a Good News headline card is made for you.
         options:
           media: images
+      - name: cardLabel
+        label: Headline card label
+        type: string
+        description: Only used when there's no photo. A few words shown in red above the headline, like "Hometown Pride" or "Neighbors Helping Neighbors". Leave blank for "Good News".
       - name: coverAlt
-        label: Cover image description
+        label: Photo description
         type: string
         description: A few words describing the photo, for people using screen readers.
       - name: credit

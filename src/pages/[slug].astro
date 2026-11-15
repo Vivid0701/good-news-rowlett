@@ -25,7 +25,7 @@ const jsonLd = {
       <span class="eyebrow">{fmtDate(g.createdAt)}{g.author && ` · ${g.author}`}</span>
       <h1>{g.title}</h1>
       <p class="gn-dek">{g.excerpt}</p>
-      {g.cover && <figure><img class="post-hero" src={g.cover} alt={g.coverAlt || ""} width="1200" height="630">{g.credit && <figcaption class="note">{g.credit}</figcaption>}</figure>}
+      {g.photo && <figure><img class="post-hero" src={g.photo} alt={g.coverAlt || ""}>{g.credit && <figcaption class="note">{g.credit}</figcaption>}</figure>}
       <StoryBody body={g.body} />
       {g.sources && g.sources.length > 0 && <p class="note">Source{g.sources.length > 1 ? "s" : ""}: {g.sources.map((s, i) => <>{i > 0 && " · "}<a href={s.url} target="_blank" rel="noopener">{s.name}</a></>)}</p>}
 
