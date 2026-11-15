@@ -15,6 +15,7 @@ content:
     type: collection
     path: src/data/stories
     format: json
+    extension: json
     filename:
       template: "{primary}.json"
       field: false
