@@ -1,8 +1,9 @@
 {
   "title": "Ten years of neighbors cleaning up Lake Ray Hubbard",
-  "publish": false,
+  "publish": true,
   "date": "2026-11-15",
   "excerpt": "Volunteers from Rowlett, Garland and Dallas just marked a decade of caring for the lake we all share.",
+  "cover": "/images/screenshot-2026-11-15-at-51830-pm.png",
   "coverAlt": "Ten years of cleaning up Lake Ray Hubbard",
   "body": "Lake Ray Hubbard is a big part of what makes Rowlett home. For ten years now, a small army of neighbors has made it their job to keep it that way.\n\nThe Tri-City Cleanup brings together Keep Rowlett Beautiful, Keep Garland Beautiful and Keep Dallas Beautiful for one morning every fall. Volunteers spread out to the shoreline, parks, creeks and roadways around the lake and haul out whatever doesn't belong there. This October marked the 10th annual cleanup.\n\nThe numbers from the year before show how much a few hours can do:\n\n- 359 volunteers\n- 1,526 hours of work\n- 37 miles of shoreline cleaned\n- 7,762 pounds of debris removed\n- More than 100 tires pulled out\n\nWhen the work is done, everyone heads back to the Hella Shrine pavilion on Rowlett Road for a volunteer appreciation picnic.\n\nIf you've ever enjoyed a sunset over the lake, thank a Tri-City volunteer. Better yet, join them next fall. Keep Rowlett Beautiful posts its events at keeprowlettbeautiful.org.",
   "sources": [
@@ -16,6 +17,5 @@
     }
   ],
   "id": "tri-city-cleanup-ten-years",
-  "order": 0,
-  "cover": "/images/gn-tri-city-cleanup-10-years.png"
+  "order": 0
 }
