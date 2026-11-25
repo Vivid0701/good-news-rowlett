@@ -1,0 +1,38 @@
+---
+// Pre-launch story form: same form as /share (same Netlify inbox, "good-news-tip"),
+// but on a page with no menu or links to the rest of the site.
+import Bare from "../layouts/Bare.astro";
+const intro = "Thanks for helping us find the good news in Rowlett! Tell us what happened in a few sentences – who, what, and why it matters. A photo is great if you have one. We'll check the details before anything is shared.";
+---
+<Bare title="Share your good news | Good News Rowlett" description="Tell us about something good happening in Rowlett.">
+  <div class="wrap">
+    <section class="band" style="padding-top:36px">
+      <div class="stack" style="gap:18px;max-width:640px;margin:0 auto">
+        <h1 style="font-size:clamp(2rem,5vw,3rem)">Share your good news</h1>
+        <p class="muted">{intro}</p>
+        <form class="f card" name="good-news-tip" method="POST" action="/tell-us-thanks" data-netlify="true" netlify-honeypot="website_url" enctype="multipart/form-data">
+          <input type="hidden" name="form-name" value="good-news-tip">
+          <p hidden><label>Leave this empty <input name="website_url"></label></p>
+          <label>What's the good news? <textarea name="story" rows="6" required maxlength="4000" placeholder="Who, what, and why it made you smile"></textarea></label>
+          <label>Link, if there is one <input name="link" type="url" placeholder="Facebook post, article, website…"></label>
+          <label>Photo (optional) <input name="photo" type="file" accept="image/*"></label>
+          <label class="check"><input type="checkbox" name="photo_permission" value="yes"> I took this photo or have permission to share it</label>
+          <hr style="border:0;border-top:1px solid var(--line)">
+          <div class="two">
+            <label>Your name <input name="name" required></label>
+            <label>Your email <input name="email" type="email" required></label>
+          </div>
+          <label class="check"><input type="checkbox" name="credit_me" value="yes"> It's OK to credit me by name</label>
+          <div><button class="btn red" type="submit">Send</button></div>
+          <p class="note">We only use your details for Good News Rowlett. We never sell or share them.</p>
+        </form>
+      </div>
+    </section>
+  </div>
+</Bare>
+<style>
+  form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:560px){form .two{grid-template-columns:1fr}}
+  form .check{display:flex;gap:10px;align-items:center;font-weight:600}
+  form .check input{width:auto}
+</style>
