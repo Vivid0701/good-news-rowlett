@@ -1,0 +1,13 @@
+---
+// Private preview of any story, drafts included. Not linked anywhere and hidden from Google.
+import Base from "../../layouts/Base.astro";
+import StoryView from "../../components/StoryView.astro";
+import { allStories, PREVIEW_PATH } from "../../lib.js";
+export function getStaticPaths() {
+  return allStories.map((g) => ({ params: { slug: g.id }, props: { g } }));
+}
+const { g } = Astro.props;
+---
+<Base title={`Preview: ${g.title}`} description={g.excerpt} noindex={true}>
+  <StoryView g={g} url={new URL(`/${g.id}`, Astro.site).href} preview={true} previewHome={PREVIEW_PATH} />
+</Base>

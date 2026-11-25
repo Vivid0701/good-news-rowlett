@@ -48,7 +48,7 @@ function headlineCard(label, title) {
   return new Resvg(svg, { font: { fontFiles: FONTS, loadSystemFonts: false, defaultFontFamily: "Inter Display" } }).render().asPng();
 }
 
-const stories = readStories(join(root, "src/data/stories"));
+const stories = readStories(join(root, "src/data/stories"), { all: true });
 const map = {};
 for (const g of stories) {
   const cover = (g.cover || "").trim();

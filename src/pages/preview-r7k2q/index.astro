@@ -1,0 +1,29 @@
+---
+// Private list of every story with a preview link – drafts first. Not linked anywhere and hidden from Google.
+import Base from "../../layouts/Base.astro";
+import { allStories, fmtDate, PREVIEW_PATH } from "../../lib.js";
+const drafts = allStories.filter((g) => g.draft);
+const live = allStories.filter((g) => !g.draft);
+---
+<Base title="Story previews" description="Private story previews" noindex={true}>
+  <div class="wrap">
+    <section class="band" style="max-width:820px">
+      <h1 style="font-size:clamp(2rem,5vw,2.8rem)">Story previews</h1>
+      <p class="muted">Private page – don't share this link. After you save a story in Pages CMS, give the site about two minutes to update, then refresh this page.</p>
+
+      <h2 style="margin-top:28px">Drafts ({drafts.length})</h2>
+      {drafts.length ? <ul class="pv">{drafts.map((g) => <li><a href={`${PREVIEW_PATH}/${g.id}`}><img src={g.cover} alt="" width="160" height="84"><span><b>{g.title}</b><small>{fmtDate(g.createdAt)} · Draft</small></span></a></li>)}</ul> : <p class="muted">No drafts right now.</p>}
+
+      <h2 style="margin-top:28px">Live on the site ({live.length})</h2>
+      <ul class="pv">{live.map((g) => <li><a href={`${PREVIEW_PATH}/${g.id}`}><img src={g.cover} alt="" width="160" height="84"><span><b>{g.title}</b><small>{fmtDate(g.createdAt)} · Live</small></span></a></li>)}</ul>
+    </section>
+  </div>
+</Base>
+<style>
+  .pv{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:10px}
+  .pv a{display:flex;gap:14px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:12px;background:#fff;text-decoration:none;color:inherit}
+  .pv a:hover{border-color:#ED1C24}
+  .pv img{width:120px;height:63px;object-fit:cover;border-radius:6px;flex:none}
+  .pv span{display:grid;gap:2px}
+  .pv small{color:#666}
+</style>

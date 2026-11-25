@@ -9,23 +9,28 @@ export const slugify = (s) => String(s || "").toLowerCase().replace(/&/g, "and")
 // Dates are stored as "2026-10-04". Noon keeps the day right in any time zone.
 const toTime = (d) => (d ? new Date(`${String(d).slice(0, 10)}T12:00:00`).getTime() : 0);
 
-// Only stories marked "publish" appear. A blank web address is made from the headline.
+// Only stories marked "publish" appear, unless { all: true } (used for private draft previews
+// and for making cover images). A blank web address is made from the headline; published
+// stories claim their addresses first so a draft can never take a live story's address.
 // Newest date first; stories on the same date keep their "order" (higher first), then A–Z.
-export function prepare(stories) {
+export function prepare(stories, { all = false } = {}) {
   const used = new Set();
-  return stories
-    .filter((g) => g && g.title && g.publish !== false)
-    .sort((a, b) => (toTime(b.date) - toTime(a.date)) || ((+b.order || 0) - (+a.order || 0)) || String(a.title).localeCompare(String(b.title)))
-    .map((g) => {
-      const base = slugify(g.id || g.title);
-      let id = base, n = 2;
-      while (used.has(id)) id = `${base}-${n++}`;
-      used.add(id);
-      return { ...g, id, createdAt: toTime(g.date) };
-    });
+  const sorted = stories
+    .filter((g) => g && g.title)
+    .sort((a, b) => (toTime(b.date) - toTime(a.date)) || ((+b.order || 0) - (+a.order || 0)) || String(a.title).localeCompare(String(b.title)));
+  const ids = new Map();
+  for (const g of [...sorted.filter((x) => x.publish !== false), ...sorted.filter((x) => x.publish === false)]) {
+    const base = slugify(g.id || g.title);
+    let id = base, n = 2;
+    while (used.has(id)) id = `${base}-${n++}`;
+    used.add(id); ids.set(g, id);
+  }
+  return sorted
+    .filter((g) => all || g.publish !== false)
+    .map((g) => ({ ...g, id: ids.get(g), draft: g.publish === false, createdAt: toTime(g.date) }));
 }
 
-export function readStories(dir) {
+export function readStories(dir, opts) {
   return prepare(readdirSync(dir).filter((f) => f.endsWith(".json"))
-    .map((f) => { try { return JSON.parse(readFileSync(join(dir, f), "utf8")); } catch { console.warn(`[stories] skipped ${f}: not valid JSON`); return null; } }));
+    .map((f) => { try { return JSON.parse(readFileSync(join(dir, f), "utf8")); } catch { console.warn(`[stories] skipped ${f}: not valid JSON`); return null; } }), opts);
 }

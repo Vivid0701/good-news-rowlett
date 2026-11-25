@@ -1,8 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
-import StoryBody from "../components/StoryBody.astro";
-import StoryCard from "../components/StoryCard.astro";
-import { goodNews, fmtDate, SITE_NAME, DISCLOSURE } from "../lib.js";
+import StoryView from "../components/StoryView.astro";
+import { goodNews, SITE_NAME } from "../lib.js";
 export function getStaticPaths() {
   return goodNews.map((g) => ({ params: { slug: g.id }, props: { g } }));
 }
@@ -20,32 +19,7 @@ const jsonLd = {
 };
 ---
 <Base title={g.title} description={g.excerpt} image={image} jsonLd={jsonLd} ogType="article">
-  <div class="wrap">
-    <article class="prose gn-story">
-      <span class="eyebrow">{fmtDate(g.createdAt)}{g.author && ` · ${g.author}`}</span>
-      <h1>{g.title}</h1>
-      <p class="gn-dek">{g.excerpt}</p>
-      {g.photo && <figure><img class="post-hero" src={g.photo} alt={g.coverAlt || ""}>{g.credit && <figcaption class="note">{g.credit}</figcaption>}</figure>}
-      <StoryBody body={g.body} />
-      {g.sources && g.sources.length > 0 && <p class="note">Source{g.sources.length > 1 ? "s" : ""}: {g.sources.map((s, i) => <>{i > 0 && " · "}<a href={s.url} target="_blank" rel="noopener">{s.name}</a></>)}</p>}
-
-      <div class="gn-share" data-title={g.title}>
-        <span>Pass it on:</span>
-        <a class="btn small" data-share="facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`} target="_blank" rel="noopener">Share on Facebook</a>
-        <button class="btn ghost small" type="button" data-share="copy">Copy link</button>
-        <button class="btn ghost small" type="button" data-share="native" hidden>Share…</button>
-      </div>
-
-      <p class="note">{DISCLOSURE}</p>
-      <div class="gn-cta">
-        <div><h2>Know some good news?</h2><p>A neighbor going the extra mile, a business milestone, a student or team worth cheering for. Tell us and we'll check the details.</p></div>
-        <div class="gn-cta-btns"><a class="btn red" href="/share">Share your good news</a></div>
-      </div>
-    </article>
-
-    {more.length > 0 && <section class="band" style="padding-top:0"><div class="sec-head"><h2>More good news</h2><a href="/">See all →</a></div>
-      <div class="gn-grid">{more.map((x) => <StoryCard g={x} />)}</div></section>}
-  </div>
+  <StoryView g={g} url={url} more={more} />
 </Base>
 <script is:inline>
   (function () {
