@@ -4,7 +4,7 @@ import FormPage from "../components/FormPage.astro";
 <FormPage title="Share good news" heading="Share some good news" name="good-news-tip" upload={true}
   intro="Seen something good happening in Rowlett? A neighbor going the extra mile, a business milestone, a student or team worth cheering for – tell us. A few sentences and a photo is plenty. We check the details before anything is published.">
   <label>What's the good news? <textarea name="story" rows="6" required maxlength="4000" placeholder="Who, what, and why it made you smile"></textarea></label>
-  <label>Link, if there is one <input name="link" type="url" placeholder="Facebook post, article, website…"></label>
+  <label>Link, if there is one <input name="link" type="text" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Facebook post, article, website…"></label>
   <label>Photo (optional) <input name="photo" type="file" accept="image/*"></label>
   <label class="check"><input type="checkbox" name="photo_permission" value="yes"> I took this photo or have permission to share it</label>
   <hr style="border:0;border-top:1px solid var(--line)">
