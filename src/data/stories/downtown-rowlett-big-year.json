@@ -1,14 +1,10 @@
 {
   "title": "Downtown Rowlett had a big year – and it's just getting started",
-  "id": "downtown-rowlett-big-year",
-  "date": "2026-11-25",
   "publish": false,
-  "author": "",
+  "date": "2026-11-25",
   "excerpt": "New shops, a first-ever car show and a summer of music brought more people downtown in 2026 than ever.",
-  "cover": "",
+  "cover": "/images/screenshot-2026-11-25-at-41945-pm.png",
   "cardLabel": "Downtown Rowlett",
-  "coverAlt": "",
-  "credit": "",
   "body": "If you haven't walked Main Street lately, you're missing something.\n\nDowntown Rowlett grew in 2026. New businesses opened their doors, including a florist and a barber shop, and the calendar filled up with reasons to come downtown and stay awhile.\n\nIn May, Downtown Rowlett hosted the city's first-ever Rowlett Rides car, truck and motorcycle show, with classic rides lining Main Street and live music to match. Live on Main brought neighbors out to sip, shop and celebrate, and the summer concert series gave families a reason to grab a lawn chair and spend an evening together.\n\nMayor Jeff Winget summed it up this way: \"I'm so proud of how our downtown has grown and thrived over the past year! From a florist to a barber shop, several events that included a car show and our summer concert series, we've been building something special. I'm excited to see what next year has in store!\"\n\nSo are we. Next time you're looking for a place to grab a bite, get a haircut or pick up flowers, start downtown.\n\nKnow a downtown business with good news to share? Tell us about it.",
   "sources": [
     {
@@ -20,5 +16,6 @@
       "url": "https://www.eventeny.com/events/live-on-main-for-all-30655/"
     }
   ],
+  "id": "downtown-rowlett-big-year",
   "order": 0
 }
