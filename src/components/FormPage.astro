@@ -10,7 +10,7 @@ const { title, heading, intro, name, upload = false, nav = "", button = "Send" }
       <div class="stack" style="gap:18px;max-width:640px">
         <h1 style="font-size:clamp(2rem,5vw,3rem)">{heading}</h1>
         <p class="muted">{intro}</p>
-        <form class="f card" name={name} method="POST" action={`/thanks?form=${name}`} data-netlify="true" netlify-honeypot="website_url" enctype={upload ? "multipart/form-data" : undefined}>
+        <form class="f card" name={name} method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="website_url" enctype={upload ? "multipart/form-data" : undefined}>
           <input type="hidden" name="form-name" value={name}>
           <p hidden><label>Leave this empty <input name="website_url"></label></p>
           <slot />

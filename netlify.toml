@@ -13,6 +13,16 @@
   status = 301
   force = true
 
+# Old thank-you pages now point to the single /thank-you page.
+[[redirects]]
+  from = "/thanks"
+  to = "/thank-you"
+  status = 301
+[[redirects]]
+  from = "/tell-us-thanks"
+  to = "/thank-you"
+  status = 301
+
 # Email sign-up is off for now (page kept as src/pages/_subscribe.astro).
 [[redirects]]
   from = "/subscribe"

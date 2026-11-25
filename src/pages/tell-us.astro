@@ -10,7 +10,7 @@ const intro = "Thanks for helping us find the good news in Rowlett! Tell us what
       <div class="stack" style="gap:18px;max-width:640px;margin:0 auto">
         <h1 style="font-size:clamp(2rem,5vw,3rem)">Share your good news</h1>
         <p class="muted">{intro}</p>
-        <form class="f card" name="good-news-tip" method="POST" action="/tell-us-thanks" data-netlify="true" netlify-honeypot="website_url" enctype="multipart/form-data">
+        <form class="f card" name="good-news-tip" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="website_url" enctype="multipart/form-data">
           <input type="hidden" name="form-name" value="good-news-tip">
           <p hidden><label>Leave this empty <input name="website_url"></label></p>
           <label>What's the good news? <textarea name="story" rows="6" required maxlength="4000" placeholder="Who, what, and why it made you smile"></textarea></label>
