@@ -1,9 +1,7 @@
 {
   "title": "Lions Club plants a community garden at Rowlett's oldest church",
-  "id": "lions-club-community-garden-first-christian",
+  "publish": true,
   "date": "2026-11-26",
-  "publish": false,
-  "author": "",
   "excerpt": "Rowlett Lions are building raised garden beds at First Christian Church, home of the Hope in Hand Food Pantry.",
   "cover": "/images/lions-club-community-garden.png",
   "cardLabel": "Neighbors helping neighbors",
@@ -20,5 +18,6 @@
       "url": "https://garlandisd.net/programs-services/wellness-and-support-resources/hope-hand-food-pantry-first-christian-church"
     }
   ],
+  "id": "lions-club-community-garden-first-christian",
   "order": 0
 }
