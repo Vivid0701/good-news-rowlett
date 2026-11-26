@@ -20,9 +20,9 @@ content:
       template: "{primary}.json"
       field: false
     view:
-      fields: [title, date, publish]
+      fields: [title, position, date, publish]
       primary: title
-      sort: [date, title]
+      sort: [position, date, title]
       search: [title, excerpt, body]
       default:
         sort: date
@@ -37,6 +37,10 @@ content:
         type: boolean
         default: false
         description: Leave this off while you're writing. Turn it on when the story is ready to go live.
+      - name: position
+        label: Position on the page
+        type: number
+        description: Optional. 1 puts this story at the top of the home page, 2 second, and so on. Leave blank to sort by date.
       - name: date
         label: Date
         type: date
