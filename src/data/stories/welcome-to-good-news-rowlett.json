@@ -1,10 +1,10 @@
 {
   "title": "Welcome to Good News Rowlett",
-  "publish": true,
+  "publish": false,
   "date": "2026-10-04",
   "excerpt": "A home for the good things happening in Rowlett – the neighbors, businesses and moments that make this town home.",
+  "cover": "/images/good-news-card.png",
   "coverAlt": "Good News Rowlett",
   "body": "Scroll through some local Facebook groups and you might think nothing good ever happens in Rowlett. Anyone who lives here knows better.\n\nEvery week, a neighbor mows a yard for someone who's laid up. A local shop sponsors a Little League team. A teacher stays late. Someone opens a new restaurant on a dream and a lot of hard work. Those stories rarely trend, but they're the real Rowlett.\n\nGood News Rowlett is where we'll collect them – short, true stories about the people and places that make this a great place to live, written so you can pass them along.\n\nHere's what you'll find:\n\n- New businesses opening, and milestones for the ones that have been here for years\n- Neighbors helping neighbors\n- Students, teachers, coaches and volunteers worth celebrating\n- Community events, park improvements and things to do around Lake Ray Hubbard\n\nWhat you won't find: politics, arguments or rumors. There are plenty of places for those already.\n\nHave some good news? Share it with us. A few sentences and a photo is plenty. We'll check the details and give it the spotlight it deserves.\n\nThanks for reading, and thanks for choosing to see the best in Rowlett.",
-  "order": 1,
-  "cover": "/images/good-news-card.png"
+  "order": 1
 }
