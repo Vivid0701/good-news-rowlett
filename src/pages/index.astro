@@ -4,8 +4,17 @@ import Logo from "../components/Logo.astro";
 import StoryCard from "../components/StoryCard.astro";
 import { goodNews, fmtDate, DISCLOSURE } from "../lib.js";
 const [lead, ...rest] = goodNews;
+// Tells search engines what Good News Rowlett is and where it covers.
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "WebSite", name: "Good News Rowlett", url: Astro.site.href,
+    description: "Real stories from the neighbors, businesses and moments that make Rowlett, Texas home." },
+  { "@context": "https://schema.org", "@type": "NewsMediaOrganization", name: "Good News Rowlett", url: Astro.site.href,
+    logo: new URL("/good-news-icon.png", Astro.site).href, email: "kenna@goodnewsrowlett.com",
+    areaServed: { "@type": "City", name: "Rowlett", address: { "@type": "PostalAddress", addressLocality: "Rowlett", addressRegion: "TX", addressCountry: "US" } },
+    publishingPrinciples: new URL("/about", Astro.site).href },
+];
 ---
-<Base title="" description="Real stories from the neighbors, businesses and moments that make Rowlett, Texas home. Good news worth sharing." nav="stories">
+<Base title="" description="Real stories from the neighbors, businesses and moments that make Rowlett, Texas home. Good news worth sharing." nav="stories" jsonLd={jsonLd}>
   <section class="gn-hero"><div class="wrap">
     <Logo />
     <p class="gn-intro">Real stories from the neighbors, businesses and moments that make Rowlett home. No politics, no arguments – just the good stuff, ready to share.</p>
