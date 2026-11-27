@@ -35,6 +35,10 @@
   to = "/"
   status = 301
 [[redirects]]
+  from = "/buzzy-pyles-mayor-of-esquire-lane"
+  to = "/buzzy-mayor-of-esquire-lane"
+  status = 301
+[[redirects]]
   from = "/good-news/share"
   to = "/share"
   status = 301
